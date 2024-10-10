@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :trips, only: %i[create]
     namespace :stats do
       get :weekly, to: "weekly#show"
+      get :monthly, to: "monthly#index"
     end
   end
 end

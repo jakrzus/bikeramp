@@ -15,11 +15,11 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_10_164341) do
   enable_extension "plpgsql"
 
   create_table "trips", force: :cascade do |t|
-    t.string "start_address"
-    t.string "destination_address"
-    t.decimal "price", precision: 8, scale: 2
-    t.date "date"
-    t.integer "distance"
+    t.string "start_address", null: false
+    t.string "destination_address", null: false
+    t.decimal "price", precision: 8, scale: 2, null: false
+    t.date "date", null: false
+    t.integer "distance", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

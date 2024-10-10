@@ -3,11 +3,11 @@
 # Table name: trips
 #
 #  id                  :bigint           not null, primary key
-#  date                :date
-#  destination_address :string
-#  distance            :integer
-#  price               :decimal(8, 2)
-#  start_address       :string
+#  date                :date             not null
+#  destination_address :string           not null
+#  distance            :integer          not null
+#  price               :decimal(8, 2)    not null
+#  start_address       :string           not null
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #
@@ -15,9 +15,7 @@ class TripSerializer < ApplicationSerializer
   attributes :id, :start_address, :destination_address, :price, :date, :distance
 
   def date
-    month = I18n.l(object.date, format: :month)
-    day = object.date.day.ordinalize
-    "#{month}, #{day}"
+    formatted_date(object.date)
   end
 
   def distance
@@ -25,6 +23,6 @@ class TripSerializer < ApplicationSerializer
   end
 
   def price
-    number_to_currency(object.price, unit: "PLN", precision: 2, format: "%n%u")
+    formatted_price(object.price)
   end
 end
