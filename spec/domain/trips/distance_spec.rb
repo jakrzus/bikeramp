@@ -3,7 +3,8 @@ require 'rails_helper'
 
 RSpec.describe Trips::Distance do
   describe '#to_m' do
-    let(:trip) { create(:trip) }
+    let(:trip) { build(:trip) }
+    let(:api_response) { {} }
     let(:api_directions) { instance_double(GoogleMaps::Api::Directions, get: api_response) }
     before do
       allow(GoogleMaps::Api::Directions).to(
@@ -27,6 +28,22 @@ RSpec.describe Trips::Distance do
 
       it 'returns nil' do
         expect(described_class.new(trip).to_m).to be_nil
+      end
+    end
+
+    context 'when start address is missing' do
+      let(:trip) { build(:trip, start_address: nil) }
+
+      it 'raises error' do
+        expect { described_class.new(trip).to_m }.to raise_error(Trips::Distance::StartAddressMissingError)
+      end
+    end
+
+    context 'when destination address is missing' do
+      let(:trip) { build(:trip, destination_address: nil) }
+
+      it 'raises error' do
+        expect { described_class.new(trip).to_m }.to raise_error(Trips::Distance::DestinationAddressMissingError)
       end
     end
   end
