@@ -12,4 +12,8 @@ class ApplicationSerializer < ActiveModel::Serializer
     day = date.day.ordinalize
     "#{month}, #{day}"
   end
+
+  def formatted_price(price)
+    number_to_currency(price, unit: "PLN", precision: 2, format: "%n%u")
+  end
 end

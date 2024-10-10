@@ -8,7 +8,7 @@ module Trips
       end
 
       def total_price
-        number_to_currency(object.total_price, unit: "PLN", precision: 2, format: "%n%u")
+        formatted_price(object.total_price)
       end
     end
   end

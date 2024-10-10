@@ -23,6 +23,6 @@ class TripSerializer < ApplicationSerializer
   end
 
   def price
-    number_to_currency(object.price, unit: "PLN", precision: 2, format: "%n%u")
+    formatted_price(object.price)
   end
 end
