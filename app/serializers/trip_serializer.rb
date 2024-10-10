@@ -11,7 +11,7 @@
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
 #
-class TripSerializer < ActiveModel::Serializer
+class TripSerializer < ApplicationSerializer
   attributes :id, :start_address, :destination_address, :price, :date, :distance
 
   def date
@@ -23,6 +23,10 @@ class TripSerializer < ActiveModel::Serializer
   def distance
     km = (object.distance / 1000.0).round(2)
 
-    "#{km} km"
+    "#{km}km"
+  end
+
+  def price
+    number_to_currency(object.price, unit: "PLN", precision: 2, format: "%n%u")
   end
 end
