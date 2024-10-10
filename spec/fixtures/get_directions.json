@@ -1,0 +1,187 @@
+{
+   "geocoded_waypoints": [
+      {
+         "geocoder_status": "OK",
+         "place_id": "ChIJ_wvtkorMHkcRcO3odzKixxE",
+         "types": [
+            "street_address"
+         ]
+      },
+      {
+         "geocoder_status": "OK",
+         "place_id": "ChIJaYoWp4TMHkcRfuqNlLtFHGY",
+         "types": [
+            "street_address"
+         ]
+      }
+   ],
+   "routes": [
+      {
+         "bounds": {
+            "northeast": {
+               "lat": 52.2366904,
+               "lng": 21.0097371
+            },
+            "southwest": {
+               "lat": 52.2306191,
+               "lng": 20.9832081
+            }
+         },
+         "copyrights": "Map data ©2024 Google",
+         "legs": [
+            {
+               "distance": {
+                  "text": "2.2 km",
+                  "value": 2171
+               },
+               "duration": {
+                  "text": "8 mins",
+                  "value": 474
+               },
+               "end_address": "plac Europejski 2, 00-844 Warszawa, Poland",
+               "end_location": {
+                  "lat": 52.2320997,
+                  "lng": 20.9832081
+               },
+               "start_address": "Plac Jana Henryka Dąbrowskiego 1, 00-057 Warszawa, Poland",
+               "start_location": {
+                  "lat": 52.2366904,
+                  "lng": 21.0097371
+               },
+               "steps": [
+                  {
+                     "distance": {
+                        "text": "51 m",
+                        "value": 51
+                     },
+                     "duration": {
+                        "text": "1 min",
+                        "value": 8
+                     },
+                     "end_location": {
+                        "lat": 52.2365371,
+                        "lng": 21.0090365
+                     },
+                     "html_instructions": "Head \u003cb\u003ewest\u003c/b\u003e on \u003cb\u003ePlac Jana Henryka Dąbrowskiego\u003c/b\u003e toward \u003cb\u003eSzkolna\u003c/b\u003e",
+                     "polyline": {
+                        "points": "iny}H{mf_CXtBBT"
+                     },
+                     "start_location": {
+                        "lat": 52.2366904,
+                        "lng": 21.0097371
+                     },
+                     "travel_mode": "BICYCLING"
+                  },
+                  {
+                     "distance": {
+                        "text": "0.1 km",
+                        "value": 129
+                     },
+                     "duration": {
+                        "text": "1 min",
+                        "value": 24
+                     },
+                     "end_location": {
+                        "lat": 52.235454,
+                        "lng": 21.009697
+                     },
+                     "html_instructions": "Turn \u003cb\u003eleft\u003c/b\u003e onto \u003cb\u003eSzkolna\u003c/b\u003e",
+                     "maneuver": "turn-left",
+                     "polyline": {
+                        "points": "kmy}Hoif_CZOjCuAZOTM"
+                     },
+                     "start_location": {
+                        "lat": 52.2365371,
+                        "lng": 21.0090365
+                     },
+                     "travel_mode": "BICYCLING"
+                  },
+                  {
+                     "distance": {
+                        "text": "0.8 km",
+                        "value": 796
+                     },
+                     "duration": {
+                        "text": "3 mins",
+                        "value": 208
+                     },
+                     "end_location": {
+                        "lat": 52.233407,
+                        "lng": 20.9985715
+                     },
+                     "html_instructions": "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eŚwiętokrzyska\u003c/b\u003e",
+                     "maneuver": "turn-right",
+                     "polyline": {
+                        "points": "qfy}Hsmf_CBX@PFd@LdABt@D\\@F@F@PFb@BP@LHt@NrAXpB@PD^BNPhAr@bGD\\BPRxAHl@Pf@V|BNlA?`@?@Dl@n@fFNjAJ|@PxAHr@BRDr@?R?H?D?TAd@?l@"
+                     },
+                     "start_location": {
+                        "lat": 52.235454,
+                        "lng": 21.009697
+                     },
+                     "travel_mode": "BICYCLING"
+                  },
+                  {
+                     "distance": {
+                        "text": "1.0 km",
+                        "value": 1001
+                     },
+                     "duration": {
+                        "text": "3 mins",
+                        "value": 201
+                     },
+                     "end_location": {
+                        "lat": 52.2306191,
+                        "lng": 20.9846859
+                     },
+                     "html_instructions": "At the roundabout, take the \u003cb\u003e1st\u003c/b\u003e exit onto \u003cb\u003eProsta\u003c/b\u003e",
+                     "maneuver": "roundabout-right",
+                     "polyline": {
+                        "points": "yyx}Hahd_C?N@PAL@L?J@F@J?@BJBLDJDLFNNf@J^FTDP@JF^L`ABPDTDVPtA@NNdAXhCNnAR~A@DDXHh@DZRrAHj@BLFh@PjAPhABRL`Ah@bED^@N@LB`@J`B@r@BRBb@@RBR@PDZ`@`DBPDb@j@jENtAH~@@\\Bb@Bd@Fz@"
+                     },
+                     "start_location": {
+                        "lat": 52.233407,
+                        "lng": 20.9985715
+                     },
+                     "travel_mode": "BICYCLING"
+                  },
+                  {
+                     "distance": {
+                        "text": "0.2 km",
+                        "value": 194
+                     },
+                     "duration": {
+                        "text": "1 min",
+                        "value": 33
+                     },
+                     "end_location": {
+                        "lat": 52.2320997,
+                        "lng": 20.9832081
+                     },
+                     "html_instructions": "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eTowarowa\u003c/b\u003e/\u003cwbr/\u003e\u003cb\u003eDW634\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eDestination will be on the right\u003c/div\u003e",
+                     "maneuver": "turn-right",
+                     "polyline": {
+                        "points": "khx}Hiqa_CY^KNKPSZUVMLKJUPu@n@IHuAfAEB"
+                     },
+                     "start_location": {
+                        "lat": 52.2306191,
+                        "lng": 20.9846859
+                     },
+                     "travel_mode": "BICYCLING"
+                  }
+               ],
+               "traffic_speed_entry": [],
+               "via_waypoint": []
+            }
+         ],
+         "overview_polyline": {
+            "points": "iny}H{mf_C\\jCfDeBp@]Dj@TjBHrALdAdA|InA|J\\fCPf@V|BNlA?`@Dn@|AjMLfADfAAjA?|ADl@Lf@L\\ZfAVrA\\`ChBdO|ArK`AxHR`DJ~BJ`AvAbLXtCD`AJ`Be@n@_@l@c@d@aBvA{AjA"
+         },
+         "summary": "Świętokrzyska and Prosta",
+         "warnings": [
+            "Bicycling directions are in beta. Use caution – This route may contain streets that aren't suited for bicycling."
+         ],
+         "waypoint_order": []
+      }
+   ],
+   "status": "OK"
+}
