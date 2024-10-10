@@ -23,7 +23,15 @@ module Trips
           .get
     end
 
-    class StartAddressMissingError < StandardError; end
-    class DestinationAddressMissingError < StandardError; end
+    class StartAddressMissingError < StandardError
+      def message
+        "Start address is missing"
+      end
+    end
+    class DestinationAddressMissingError < StandardError
+      def message
+        "Destination address is missing"
+      end
+    end
   end
 end
