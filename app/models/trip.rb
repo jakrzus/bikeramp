@@ -12,4 +12,5 @@
 #  updated_at          :datetime         not null
 #
 class Trip < ApplicationRecord
+  validates :start_address, :destination_address, :price, :date, :distance, presence: true
 end
