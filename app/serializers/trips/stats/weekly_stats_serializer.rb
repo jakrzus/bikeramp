@@ -4,9 +4,7 @@ module Trips
       attributes :total_distance, :total_price
 
       def total_distance
-        km = (object.total_distance / 1000.0).round(2)
-
-        "#{km}km"
+        meters_to_formatted_kilometers(object.total_distance)
       end
 
       def total_price

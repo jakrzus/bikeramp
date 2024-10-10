@@ -21,9 +21,7 @@ class TripSerializer < ApplicationSerializer
   end
 
   def distance
-    km = (object.distance / 1000.0).round(2)
-
-    "#{km}km"
+    meters_to_formatted_kilometers(object.distance)
   end
 
   def price
