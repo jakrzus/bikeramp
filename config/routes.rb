@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   # root "posts#index"
   namespace :api do
     resources :trips, only: %i[create]
+    namespace :stats do
+      get :weekly, to: "weekly#show"
+    end
   end
 end
