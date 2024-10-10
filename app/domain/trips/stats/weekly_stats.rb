@@ -1,6 +1,6 @@
 module Trips
   module Stats
-    class WeeklyStats
+    class WeeklyStats < ActiveModelSerializers::Model
       def total_distance
         trips.sum(&:distance)
       end
