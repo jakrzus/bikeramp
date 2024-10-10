@@ -15,7 +15,7 @@ module Trips
       def average_distance
         return 0 if trips.size.zero?
 
-        total_distance / trips.size
+        (total_distance / trips.size).to_i
       end
 
       def total_price
