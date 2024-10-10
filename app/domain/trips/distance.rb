@@ -14,13 +14,16 @@ module Trips
     private
 
     def api_response
-      raise "No start address" unless @trip.start_address
-      raise "No destination address" unless @trip.destination_address
+      raise StartAddressMissingError unless @trip.start_address
+      raise DestinationAddressMissingError unless @trip.destination_address
 
       @_api_response ||=
         GoogleMaps::Api::Directions
           .new(@trip.start_address, @trip.destination_address)
           .get
     end
+
+    class StartAddressMissingError < StandardError; end
+    class DestinationAddressMissingError < StandardError; end
   end
 end
