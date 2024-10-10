@@ -34,6 +34,7 @@ RSpec.describe "Api::Trips", type: :request do
       let(:params) do
         {
           start_address: 'Plac Europejski 2, Warszawa, Polska',
+          destination_address: 'Plac Dąbrowskiego 1, Warszawa, Polska',
           price: 9.99
         }
       end
@@ -43,6 +44,8 @@ RSpec.describe "Api::Trips", type: :request do
         end.not_to change(Trip, :count)
 
         expect(response).to have_http_status(:unprocessable_entity)
+        parsed_response = JSON.parse(response.body)
+        expect(parsed_response['errors']).to eq("date" => [ "can't be blank" ])
       end
     end
 
@@ -63,7 +66,8 @@ RSpec.describe "Api::Trips", type: :request do
         end.not_to change(Trip, :count)
 
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(JSON.parse(response.body)['error']).to eq("Destination address is missing")
+        parsed_response = JSON.parse(response.body)
+        expect(parsed_response['error']).to eq("Destination address is missing")
       end
     end
   end
