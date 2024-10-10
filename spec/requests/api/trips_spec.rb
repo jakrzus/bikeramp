@@ -24,9 +24,9 @@ RSpec.describe "Api::Trips", type: :request do
 
         expect(parsed_response['start_address']).to eq(params[:start_address])
         expect(parsed_response['destination_address']).to eq(params[:destination_address])
-        expect(parsed_response['price']).to eq("9.99")
+        expect(parsed_response['price']).to eq("9.99PLN")
         expect(parsed_response['date']).to eq("October, 10th")
-        expect(parsed_response['distance']).to eq("1.23 km")
+        expect(parsed_response['distance']).to eq("1.23km")
       end
     end
 
