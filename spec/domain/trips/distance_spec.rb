@@ -24,10 +24,10 @@ RSpec.describe Trips::Distance do
     end
 
     context 'with incorrect api response' do
-      let(:api_response) { {} }
+      let(:api_response) { { status: 'NOT_OK' } }
 
-      it 'returns nil' do
-        expect(described_class.new(trip).to_m).to be_nil
+      it 'raises an error' do
+        expect { described_class.new(trip).to_m }.to raise_error(Trips::Distance::RouteNotFoundError)
       end
     end
 

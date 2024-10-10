@@ -1,6 +1,8 @@
 class Api::TripsController < ApiController
   rescue_from Trips::Distance::DestinationAddressMissingError,
-              Trips::Distance::StartAddressMissingError, with: :render_error
+              Trips::Distance::StartAddressMissingError,
+              Trips::Distance::RouteNotFoundError,
+              with: :render_error
 
   def create
     trip = Trip.new(trip_params)

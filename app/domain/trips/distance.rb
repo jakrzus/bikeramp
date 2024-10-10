@@ -5,10 +5,12 @@ module Trips
     end
 
     def to_m
+      raise RouteNotFoundError if api_response["status"] != "OK"
+
       route = api_response["routes"]&.first || {}
       leg = route["legs"]&.first || {}
 
-      leg.dig("distance", "value")
+      leg.dig("distance", "value") || raise(RouteNotFoundError)
     end
 
     private
@@ -31,6 +33,12 @@ module Trips
     class DestinationAddressMissingError < StandardError
       def message
         "Destination address is missing"
+      end
+    end
+
+    class RouteNotFoundError < StandardError
+      def message
+        "Route not found, please check the addressess"
       end
     end
   end
