@@ -15,9 +15,7 @@ class TripSerializer < ApplicationSerializer
   attributes :id, :start_address, :destination_address, :price, :date, :distance
 
   def date
-    month = I18n.l(object.date, format: :month)
-    day = object.date.day.ordinalize
-    "#{month}, #{day}"
+    formatted_date(object.date)
   end
 
   def distance
